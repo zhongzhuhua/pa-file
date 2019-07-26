@@ -1,0 +1,157 @@
+sh-3.2# ./gravitee
+=========================================================================
+
+  Gravitee.IO Standalone Runtime Bootstrap Environment
+
+  GRAVITEE_HOME: /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-gateway-1.28.0
+
+  GRAVITEE_OPTS: 
+
+  JAVA: java
+
+  JAVA_OPTS:  -Xms512m -Xmx512m -Djava.awt.headless=true -XX:+HeapDumpOnOutOfMemoryError -XX:+DisableExplicitGC -Dfile.encoding=UTF-8
+
+  CLASSPATH: /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-gateway-1.28.0/lib/gravitee-gateway-standalone-bootstrap-1.28.0.jar
+
+=========================================================================
+
+16:35:33.503 [graviteeio-node] [] INFO  i.g.n.c.s.e.PropertiesConfiguration - Loading Gravitee configuration.
+16:35:33.584 [graviteeio-node] [] INFO  i.g.n.c.s.e.PropertiesConfiguration -   Gravitee configuration loaded from /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-gateway-1.28.0/config/gravitee.yml
+16:35:33.927 [graviteeio-node] [] INFO  i.g.n.c.s.e.PropertiesConfiguration - Loading Gravitee configuration. DONE
+16:35:33.972 [graviteeio-node] [] INFO  i.g.p.c.s.PluginHandlerBeanFactoryPostProcessor - Loading plugin handlers
+16:35:33.997 [graviteeio-node] [] INFO  i.g.p.c.s.PluginHandlerBeanFactoryPostProcessor - Find 8 plugin handler(s):
+16:35:34.003 [graviteeio-node] [] INFO  i.g.p.c.s.PluginHandlerBeanFactoryPostProcessor -   io.gravitee.node.notifier.plugin.NotifierPluginHandler
+16:35:34.009 [graviteeio-node] [] INFO  i.g.p.c.s.PluginHandlerBeanFactoryPostProcessor -   io.gravitee.plugin.discovery.internal.ServiceDiscoveryPluginHandler
+16:35:34.013 [graviteeio-node] [] INFO  i.g.p.c.s.PluginHandlerBeanFactoryPostProcessor -   io.gravitee.plugin.policy.internal.PolicyPluginHandler
+16:35:34.018 [graviteeio-node] [] INFO  i.g.p.c.s.PluginHandlerBeanFactoryPostProcessor -   io.gravitee.node.plugins.service.handler.ServicePluginHandler
+16:35:34.030 [graviteeio-node] [] INFO  i.g.p.c.s.PluginHandlerBeanFactoryPostProcessor -   io.gravitee.gateway.repository.plugins.RepositoryPluginHandler
+16:35:34.031 [graviteeio-node] [] INFO  i.g.p.c.s.PluginHandlerBeanFactoryPostProcessor -   io.gravitee.node.reporter.plugin.ReporterPluginHandler
+16:35:34.045 [graviteeio-node] [] INFO  i.g.p.c.s.PluginHandlerBeanFactoryPostProcessor -   io.gravitee.plugin.alert.internal.AlertPluginHandler
+16:35:34.046 [graviteeio-node] [] INFO  i.g.p.c.s.PluginHandlerBeanFactoryPostProcessor -   io.gravitee.plugin.resource.internal.ResourcePluginHandler
+16:35:34.502 [graviteeio-node] [] INFO  i.g.g.r.p.RepositoryPluginHandler - Loading repository for scope MANAGEMENT: mongodb
+16:35:34.508 [graviteeio-node] [] INFO  i.g.g.r.p.RepositoryPluginHandler - Loading repository for scope RATE_LIMIT: mongodb
+16:35:34.509 [graviteeio-node] [] INFO  i.g.g.r.p.RepositoryPluginHandler - Loading repository for scope CACHE: ehcache
+16:35:38.220 [graviteeio-node] [] INFO  i.g.n.m.h.v.e.ManagementEndpointManagerImpl - Register a new endpoint for Management API: GET /apis [io.gravitee.gateway.handlers.api.manager.endpoint.ApisManagementEndpoint]
+16:35:38.232 [graviteeio-node] [] INFO  i.g.n.m.h.v.e.ManagementEndpointManagerImpl - Register a new endpoint for Management API: GET /apis/:apiId [io.gravitee.gateway.handlers.api.manager.endpoint.ApiManagementEndpoint]
+16:35:38.404 [graviteeio-node] [] INFO  i.g.node.container.AbstractContainer - Starting Gravitee.io - API Gateway...
+16:35:38.409 [graviteeio-node] [] INFO  i.g.g.standalone.node.GatewayNode - Gravitee.io - API Gateway is now starting...
+16:35:38.412 [graviteeio-node] [] INFO  i.g.g.standalone.node.GatewayNode -   Starting component: Reactor
+16:35:38.415 [graviteeio-node] [] INFO  i.g.common.service.AbstractService - Initializing service io.gravitee.gateway.reactor.impl.DefaultReactor
+16:35:38.417 [graviteeio-node] [] INFO  i.g.c.event.impl.EventManagerImpl - Register new listener DefaultReactor for event type class io.gravitee.gateway.reactor.ReactorEvent
+16:35:38.419 [graviteeio-node] [] INFO  i.g.g.standalone.node.GatewayNode -   Starting component: VertxEmbeddedContainer
+16:35:38.420 [graviteeio-node] [] INFO  i.g.g.s.vertx.VertxEmbeddedContainer - Starting Vertx container and deploy Gateway Verticles [8 instance(s)]
+16:35:38.551 [graviteeio-node] [] INFO  i.g.g.standalone.node.GatewayNode -   Starting component: PluginEventListener
+16:35:38.552 [graviteeio-node] [] INFO  i.g.common.service.AbstractService - Initializing service io.gravitee.plugin.core.internal.PluginEventListener
+16:35:38.553 [graviteeio-node] [] INFO  i.g.c.event.impl.EventManagerImpl - Register new listener PluginEventListener for event type class io.gravitee.plugin.core.api.PluginEvent
+16:35:38.561 [graviteeio-node] [] INFO  i.g.g.standalone.node.GatewayNode -   Starting component: PluginRegistry
+16:35:38.567 [graviteeio-node] [] INFO  i.g.common.service.AbstractService - Initializing service io.gravitee.plugin.core.internal.PluginRegistryImpl
+16:35:38.584 [graviteeio-node] [] INFO  i.g.p.c.internal.PluginRegistryImpl - Initializing plugin registry.
+16:35:38.585 [graviteeio-node] [] INFO  i.g.p.c.internal.PluginRegistryImpl - Loading plugins from /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-gateway-1.28.0/plugins
+16:35:38.632 [graviteeio-node] [] INFO  i.g.p.c.internal.PluginRegistryImpl - Loading plugin from /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-gateway-1.28.0/plugins/gravitee-policy-jws-1.1.0.zip
+16:35:39.063 [vert.x-eventloop-thread-7] [] INFO  i.g.g.s.vertx.ReactorVerticle - HTTP listener ready to accept requests on port 8082
+16:35:39.063 [vert.x-eventloop-thread-2] [] INFO  i.g.g.s.vertx.ReactorVerticle - HTTP listener ready to accept requests on port 8082
+16:35:39.063 [vert.x-eventloop-thread-3] [] INFO  i.g.g.s.vertx.ReactorVerticle - HTTP listener ready to accept requests on port 8082
+16:35:39.063 [vert.x-eventloop-thread-6] [] INFO  i.g.g.s.vertx.ReactorVerticle - HTTP listener ready to accept requests on port 8082
+16:35:39.063 [vert.x-eventloop-thread-1] [] INFO  i.g.g.s.vertx.ReactorVerticle - HTTP listener ready to accept requests on port 8082
+16:35:39.064 [vert.x-eventloop-thread-0] [] INFO  i.g.g.s.vertx.ReactorVerticle - HTTP listener ready to accept requests on port 8082
+16:35:39.063 [vert.x-eventloop-thread-4] [] INFO  i.g.g.s.vertx.ReactorVerticle - HTTP listener ready to accept requests on port 8082
+16:35:39.063 [vert.x-eventloop-thread-5] [] INFO  i.g.g.s.vertx.ReactorVerticle - HTTP listener ready to accept requests on port 8082
+16:35:42.911 [graviteeio-node] [] ERROR i.g.p.c.internal.PluginRegistryImpl - An unexpected error occurs while loading plugin archive /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-gateway-1.28.0/plugins/gravitee-policy-jws-1.1.0.zip
+java.nio.file.AccessDeniedException: /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-gateway-1.28.0/plugins/gravitee-policy-jws-1.1.0.zip
+  at sun.nio.fs.UnixException.translateToIOException(UnixException.java:84)
+  at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+  at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
+  at sun.nio.fs.UnixFileSystemProvider.checkAccess(UnixFileSystemProvider.java:308)
+  at com.sun.nio.zipfs.ZipFileSystem.<init>(ZipFileSystem.java:124)
+  at com.sun.nio.zipfs.ZipFileSystemProvider.newFileSystem(ZipFileSystemProvider.java:117)
+  at java.nio.file.FileSystems.newFileSystem(FileSystems.java:326)
+  at java.nio.file.FileSystems.newFileSystem(FileSystems.java:276)
+  at io.gravitee.plugin.core.utils.FileUtils.createZipFileSystem(FileUtils.java:59)
+  at io.gravitee.plugin.core.utils.FileUtils.unzip(FileUtils.java:78)
+  at io.gravitee.plugin.core.internal.PluginRegistryImpl.loadPlugin(PluginRegistryImpl.java:189)
+  at io.gravitee.plugin.core.internal.PluginRegistryImpl.loadPlugins(PluginRegistryImpl.java:130)
+  at io.gravitee.plugin.core.internal.PluginRegistryImpl.loadPluginsFromRegistry(PluginRegistryImpl.java:118)
+  at io.gravitee.plugin.core.internal.PluginRegistryImpl.init(PluginRegistryImpl.java:101)
+  at io.gravitee.plugin.core.internal.PluginRegistryImpl.doStart(PluginRegistryImpl.java:81)
+  at io.gravitee.common.component.AbstractLifecycleComponent.start(AbstractLifecycleComponent.java:32)
+  at io.gravitee.node.container.AbstractNode.doStart(AbstractNode.java:74)
+  at io.gravitee.common.component.AbstractLifecycleComponent.start(AbstractLifecycleComponent.java:32)
+  at io.gravitee.node.container.AbstractContainer.doStart(AbstractContainer.java:89)
+  at io.gravitee.common.component.AbstractLifecycleComponent.start(AbstractLifecycleComponent.java:32)
+  at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  at java.lang.reflect.Method.invoke(Method.java:498)
+  at io.gravitee.gateway.standalone.boostrap.Bootstrap.start(Bootstrap.java:162)
+  at io.gravitee.gateway.standalone.boostrap.Bootstrap.main(Bootstrap.java:171)
+16:35:42.912 [graviteeio-node] [] INFO  i.g.p.c.internal.PluginRegistryImpl - Loading plugin from /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-gateway-1.28.0/plugins/gravitee-policy-override-http-method-1.1.0.zip
+16:35:44.628 [graviteeio-node] [] INFO  i.g.p.c.internal.PluginRegistryImpl - A plugin manifest has been loaded from: /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-gateway-1.28.0/plugins/.work/gravitee-policy-override-http-method-1.1.0/gravitee-policy-override-http-method-1.1.0.jar
+16:35:44.634 [graviteeio-node] [] INFO  i.g.p.c.internal.PluginRegistryImpl - Loading plugin from /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-gateway-1.28.0/plugins/gravitee-policy-role-based-access-control-1.0.0.zip
+16:35:45.439 [graviteeio-node] [] INFO  i.g.p.c.internal.PluginRegistryImpl - A plugin manifest has been loaded from: /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-gateway-1.28.0/plugins/.work/gravitee-policy-role-based-access-control-1.0.0/gravitee-policy-role-based-access-control-1.0.0.jar
+16:35:45.441 [graviteeio-node] [] INFO  i.g.p.c.internal.PluginRegistryImpl - Loading plugin from /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-gateway-1.28.0/plugins/gravitee-policy-generate-jwt-1.1.2.zip
+16:35:46.284 [graviteeio-node] [] INFO  i.g.p.c.internal.PluginRegistryImpl - A plugin manifest has been loaded from: /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-gateway-1.28.0/plugins/.work/gravitee-policy-generate-jwt-1.1.2/gravitee-policy-generate-jwt-1.1.2.jar
+16:35:46.286 [graviteeio-node] [] INFO  i.g.p.c.internal.PluginRegistryImpl - Loading plugin from /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-gateway-1.28.0/plugins/gravitee-resource-oauth2-provider-am-1.9.0.zip
+16:35:46.872 [graviteeio-node] [] INFO  i.g.p.c.internal.PluginRegistryImpl - A plugin manifest has been loaded from: /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-gateway-1.28.0/plugins/.work/gravitee-resource-oauth2-provider-am-1.9.0/gravitee-resource-oauth2-provider-am-1.9.0.jar
+16:35:46.873 [graviteeio-node] [] INFO  i.g.p.c.internal.PluginRegistryImpl - Loading plugin from /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-gateway-1.28.0/plugins/gravitee-policy-quota-1.6.1.zip
+16:35:47.485 [graviteeio-node] [] INFO  i.g.p.c.internal.PluginRegistryImpl - A plugin manifest has been loaded from: /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-gateway-1.28.0/plugins/.work/gravitee-policy-quota-1.6.1/gravitee-policy-quota-1.6.1.jar
+16:35:47.486 [graviteeio-node] [] INFO  i.g.p.c.internal.PluginRegistryImpl - Loading plugin from /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-gateway-1.28.0/plugins/gravitee-policy-ipfiltering-1.3.0.zip
+16:35:49.072 [graviteeio-node] [] ERROR i.g.p.c.internal.PluginRegistryImpl - An unexpected error occurs while loading plugin archive /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-gateway-1.28.0/plugins/gravitee-policy-ipfiltering-1.3.0.zip
+java.nio.file.AccessDeniedException: /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-gateway-1.28.0/plugins/gravitee-policy-ipfiltering-1.3.0.zip
+  at sun.nio.fs.UnixException.translateToIOException(UnixException.java:84)
+  at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+  at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
+  at sun.nio.fs.UnixFileSystemProvider.checkAccess(UnixFileSystemProvider.java:308)
+  at com.sun.nio.zipfs.ZipFileSystem.<init>(ZipFileSystem.java:124)
+  at com.sun.nio.zipfs.ZipFileSystemProvider.newFileSystem(ZipFileSystemProvider.java:117)
+  at java.nio.file.FileSystems.newFileSystem(FileSystems.java:326)
+  at java.nio.file.FileSystems.newFileSystem(FileSystems.java:276)
+  at io.gravitee.plugin.core.utils.FileUtils.createZipFileSystem(FileUtils.java:59)
+  at io.gravitee.plugin.core.utils.FileUtils.unzip(FileUtils.java:78)
+  at io.gravitee.plugin.core.internal.PluginRegistryImpl.loadPlugin(PluginRegistryImpl.java:189)
+  at io.gravitee.plugin.core.internal.PluginRegistryImpl.loadPlugins(PluginRegistryImpl.java:130)
+  at io.gravitee.plugin.core.internal.PluginRegistryImpl.loadPluginsFromRegistry(PluginRegistryImpl.java:118)
+  at io.gravitee.plugin.core.internal.PluginRegistryImpl.init(PluginRegistryImpl.java:101)
+  at io.gravitee.plugin.core.internal.PluginRegistryImpl.doStart(PluginRegistryImpl.java:81)
+  at io.gravitee.common.component.AbstractLifecycleComponent.start(AbstractLifecycleComponent.java:32)
+  at io.gravitee.node.container.AbstractNode.doStart(AbstractNode.java:74)
+  at io.gravitee.common.component.AbstractLifecycleComponent.start(AbstractLifecycleComponent.java:32)
+  at io.gravitee.node.container.AbstractContainer.doStart(AbstractContainer.java:89)
+  at io.gravitee.common.component.AbstractLifecycleComponent.start(AbstractLifecycleComponent.java:32)
+  at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  at java.lang.reflect.Method.invoke(Method.java:498)
+  at io.gravitee.gateway.standalone.boostrap.Bootstrap.start(Bootstrap.java:162)
+  at io.gravitee.gateway.standalone.boostrap.Bootstrap.main(Bootstrap.java:171)
+16:35:49.072 [graviteeio-node] [] INFO  i.g.p.c.internal.PluginRegistryImpl - Loading plugin from /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-gateway-1.28.0/plugins/gravitee-reporter-file-1.5.0.zip
+16:35:51.924 [graviteeio-node] [] ERROR i.g.p.c.internal.PluginRegistryImpl - An unexpected error occurs while loading plugin archive /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-gateway-1.28.0/plugins/gravitee-reporter-file-1.5.0.zip
+java.nio.file.AccessDeniedException: /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-gateway-1.28.0/plugins/gravitee-reporter-file-1.5.0.zip
+  at sun.nio.fs.UnixException.translateToIOException(UnixException.java:84)
+  at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+  at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
+  at sun.nio.fs.UnixFileSystemProvider.checkAccess(UnixFileSystemProvider.java:308)
+  at com.sun.nio.zipfs.ZipFileSystem.<init>(ZipFileSystem.java:124)
+  at com.sun.nio.zipfs.ZipFileSystemProvider.newFileSystem(ZipFileSystemProvider.java:117)
+  at java.nio.file.FileSystems.newFileSystem(FileSystems.java:326)
+  at java.nio.file.FileSystems.newFileSystem(FileSystems.java:276)
+  at io.gravitee.plugin.core.utils.FileUtils.createZipFileSystem(FileUtils.java:59)
+  at io.gravitee.plugin.core.utils.FileUtils.unzip(FileUtils.java:78)
+  at io.gravitee.plugin.core.internal.PluginRegistryImpl.loadPlugin(PluginRegistryImpl.java:189)
+  at io.gravitee.plugin.core.internal.PluginRegistryImpl.loadPlugins(PluginRegistryImpl.java:130)
+  at io.gravitee.plugin.core.internal.PluginRegistryImpl.loadPluginsFromRegistry(PluginRegistryImpl.java:118)
+  at io.gravitee.plugin.core.internal.PluginRegistryImpl.init(PluginRegistryImpl.java:101)
+  at io.gravitee.plugin.core.internal.PluginRegistryImpl.doStart(PluginRegistryImpl.java:81)
+  at io.gravitee.common.component.AbstractLifecycleComponent.start(AbstractLifecycleComponent.java:32)
+  at io.gravitee.node.container.AbstractNode.doStart(AbstractNode.java:74)
+  at io.gravitee.common.component.AbstractLifecycleComponent.start(AbstractLifecycleComponent.java:32)
+  at io.gravitee.node.container.AbstractContainer.doStart(AbstractContainer.java:89)
+  at io.gravitee.common.component.AbstractLifecycleComponent.start(AbstractLifecycleComponent.java:32)
+  at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  at java.lang.reflect.Method.invoke(Method.java:498)
+  at io.gravitee.gateway.standalone.boostrap.Bootstrap.start(Bootstrap.java:162)
+  at io.gravitee.gateway.standalone.boostrap.Bootstrap.main(Bootstrap.java:171)
+16:35:51.924 [graviteeio-node] [] INFO  i.g.p.c.internal.PluginRegistryImpl - Loading plugin from /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-gateway-1.28.0/plugins/gravitee-policy-transformheaders-1.6.0.zip
+16:35:52.633 [graviteeio-node] [] INFO  i.g.p.c.internal.PluginRegistryImpl - A plugin manifest has been loaded from: /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-gateway-1.28.0/plugins/.work/gravitee-policy-transformheaders-1.6.0/gravitee-policy-transformheaders-1.6.0.jar
+16:35:52.634 [graviteeio-node] [] INFO  i.g.p.c.internal.PluginRegistryImpl - Loading plugin from /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-gateway-1.28.0/plugins/gravitee-policy-json-validation-1.2.0.zip

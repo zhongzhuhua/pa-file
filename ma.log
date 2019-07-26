@@ -1,0 +1,93 @@
+zhongzhuhua:graviteeio-management-api-1.28.0 zhongzhuhua$ bin/gravitee
+=========================================================================
+
+  Gravitee.IO Management Standalone Runtime Bootstrap Environment
+
+  GRAVITEE_HOME: /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-management-api-1.28.0
+
+  GRAVITEE_OPTS: 
+
+  JAVA: /Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/bin/java
+
+  JAVA_OPTS:  -Xms1024m -Xmx2048m -Djava.awt.headless=true -XX:+HeapDumpOnOutOfMemoryError -XX:+DisableExplicitGC -Dfile.encoding=UTF-8
+
+  CLASSPATH: /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-management-api-1.28.0/lib/gravitee-management-api-standalone-bootstrap-1.28.0.jar
+
+=========================================================================
+
+16:35:44.385 [graviteeio-node] INFO  i.g.m.r.s.PropertiesConfiguration - Loading Gravitee Management configuration.
+16:35:44.429 [graviteeio-node] INFO  i.g.m.r.s.PropertiesConfiguration -  Gravitee Management configuration loaded from /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-management-api-1.28.0/config/gravitee.yml
+16:35:45.657 [graviteeio-node] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'properties' defined in io.gravitee.management.rest.spring.RestConfiguration: Unsatisfied dependency expressed through method 'properties' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'graviteeProperties' defined in io.gravitee.management.rest.spring.PropertiesConfiguration: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [java.util.Properties]: Factory method 'graviteeProperties' threw exception; nested exception is java.lang.IllegalStateException: java.nio.file.AccessDeniedException: /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-management-api-1.28.0/config/gravitee.yml
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'properties' defined in io.gravitee.management.rest.spring.RestConfiguration: Unsatisfied dependency expressed through method 'properties' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'graviteeProperties' defined in io.gravitee.management.rest.spring.PropertiesConfiguration: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [java.util.Properties]: Factory method 'graviteeProperties' threw exception; nested exception is java.lang.IllegalStateException: java.nio.file.AccessDeniedException: /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-management-api-1.28.0/config/gravitee.yml
+  at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769)
+  at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+  at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1305)
+  at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1144)
+  at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+  at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+  at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+  at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+  at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+  at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+  at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:154)
+  at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:705)
+  at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:531)
+  at io.gravitee.node.container.spring.SpringBasedContainer.initializeContext(SpringBasedContainer.java:61)
+  at io.gravitee.node.container.spring.SpringBasedContainer.initialize(SpringBasedContainer.java:51)
+  at io.gravitee.node.container.AbstractContainer.<init>(AbstractContainer.java:41)
+  at io.gravitee.node.container.spring.SpringBasedContainer.<init>(SpringBasedContainer.java:44)
+  at io.gravitee.management.standalone.ManagementContainer.<init>(ManagementContainer.java:27)
+  at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+  at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+  at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+  at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+  at java.lang.Class.newInstance(Class.java:442)
+  at io.gravitee.management.standalone.boostrap.Bootstrap.init(Bootstrap.java:56)
+  at io.gravitee.management.standalone.boostrap.Bootstrap.start(Bootstrap.java:158)
+  at io.gravitee.management.standalone.boostrap.Bootstrap.main(Bootstrap.java:171)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'graviteeProperties' defined in io.gravitee.management.rest.spring.PropertiesConfiguration: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [java.util.Properties]: Factory method 'graviteeProperties' threw exception; nested exception is java.lang.IllegalStateException: java.nio.file.AccessDeniedException: /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-management-api-1.28.0/config/gravitee.yml
+  at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627)
+  at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456)
+  at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1305)
+  at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1144)
+  at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+  at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+  at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+  at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+  at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+  at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+  at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+  at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1247)
+  at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167)
+  at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+  at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+  ... 25 more
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [java.util.Properties]: Factory method 'graviteeProperties' threw exception; nested exception is java.lang.IllegalStateException: java.nio.file.AccessDeniedException: /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-management-api-1.28.0/config/gravitee.yml
+  at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+  at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+  ... 39 more
+Caused by: java.lang.IllegalStateException: java.nio.file.AccessDeniedException: /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-management-api-1.28.0/config/gravitee.yml
+  at org.springframework.beans.factory.config.YamlProcessor.handleProcessError(YamlProcessor.java:187)
+  at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:179)
+  at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:134)
+  at org.springframework.beans.factory.config.YamlPropertiesFactoryBean.createProperties(YamlPropertiesFactoryBean.java:135)
+  at org.springframework.beans.factory.config.YamlPropertiesFactoryBean.getObject(YamlPropertiesFactoryBean.java:115)
+  at io.gravitee.management.rest.spring.PropertiesConfiguration.graviteeProperties(PropertiesConfiguration.java:53)
+  at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  at java.lang.reflect.Method.invoke(Method.java:498)
+  at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+  ... 40 more
+Caused by: java.nio.file.AccessDeniedException: /Users/zhongzhuhua/work/graviteeio-full-1.28.0/graviteeio-management-api-1.28.0/config/gravitee.yml
+  at sun.nio.fs.UnixException.translateToIOException(UnixException.java:84)
+  at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+  at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
+  at sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:214)
+  at java.nio.file.Files.newByteChannel(Files.java:361)
+  at java.nio.file.Files.newByteChannel(Files.java:407)
+  at java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:384)
+  at java.nio.file.Files.newInputStream(Files.java:152)
+  at org.springframework.core.io.FileSystemResource.getInputStream(FileSystemResource.java:176)
+  at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:159)
+  ... 49 more
